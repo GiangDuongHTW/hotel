@@ -1,0 +1,91 @@
+@use '~rhenus-material/breakpoints' as breakpoints;
+
+$color: #0cf;
+
+mat-card {
+  margin-top: 96px;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    
+
+    @media (max-width: breakpoints.$max-mobile-width) {
+      align-items: flex-start;
+      flex: column;
+      gap: 0;
+    }
+
+    .column {
+      flex-basis: calc(50% - 16px);
+
+      // &-small {
+      //   flex-basis: calc((100% / 3) - 16px);
+        
+      // }
+
+      &-full {
+        flex: 0 0 calc(100% - 16px);
+      }
+
+      // @media (max-width: breakpoints.$max-tablet-width) {
+
+      //   &-small {
+      //     width: 150px;
+      //   }
+      // }
+
+      @media (max-width: breakpoints.$max-mobile-width) {
+        flex: 0 0 100%;
+        width: 100%;
+
+        &-small {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+
+        &-full {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    button {
+      border-radius: 1rem;
+      transition: all 0.3s;
+      overflow: hidden;
+      z-index: 1;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($color, 15%);
+        transition: all 0.3s;
+        border-radius: 1rem;
+        z-index: -1;
+      }
+      &:hover {
+        color: #fff;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+mat-card-title, mat-label, button, mat-hint {
+  font-family: sans-serif;
+}
+textarea {
+  align-items: center;
+}

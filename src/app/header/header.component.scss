@@ -6,11 +6,11 @@ mat-toolbar {
   left: 0;
   width: 100vw;
   height: 64px;
-  // background-color: colors.$rhenus-blue;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
 
   @media (max-width: breakpoints.$max-mobile-width) {
     padding: 0 16px;
@@ -32,35 +32,8 @@ mat-toolbar {
       width: 100%;
     }
   }
-
- 
 }
 
-.layout {
-    margin: 80px auto 64px;
-    width: 1200px;
-  
-    @media (max-width: breakpoints.$max-tablet-width) {
-      width: 87.5vw;
-    }
-  
-    @media (max-width: breakpoints.$max-mobile-width) {
-      margin: 64px auto;
-      width: 100%;
-      padding: 0 16px;
-      box-sizing: border-box;
-    }
-  }
-
-  a {
-    text-decoration: none;
-    font-family: monospace;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  a, span {
-    font-family: sans-serif;
-  }
+a {
+  font-family: sans-serif;
+}

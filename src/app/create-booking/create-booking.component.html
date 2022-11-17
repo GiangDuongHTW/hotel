@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create new booking</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="row" *ngIf="bookingsForm" [formGroup]="bookingsForm">
+    <mat-form-field appearance="fill" class="column">
+      <mat-label>Name</mat-label>
+      <input type="text" formControlName="name" matInput />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="column">
+      <mat-label>Room Number</mat-label>
+      <input type="text" formControlName="roomNumber" matInput />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="column-full">
+      <mat-label>Request</mat-label>
+      <textarea formControlName="request" matInput></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="column">
+      <mat-label>Check In</mat-label>
+      <input formControlName="checkIn" matInput [matDatepicker]="picker1" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="column">
+      <mat-label>Check Out</mat-label>
+      <input formControlName="checkOut" matInput [matDatepicker]="picker2" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions class="submit">
+    <button (click)="submit()" color="primary" mat-flat-button>Submit</button>
+  </mat-card-actions>
+</mat-card>

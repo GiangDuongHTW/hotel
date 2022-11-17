@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+    <div class="nav-content">
+      <div>
+        <span>Booking App</span>
+      </div>
+      <div>
+        <a mat-button routerLink="bookings">Overview
+          <span matBadge="{{ totalPerson }}" matBadgeColor="warn" matBadgeOverlap="false"></span>
+        </a>
+        <a mat-button routerLink="/create">Create</a>
+      </div>
+    </div>
+</mat-toolbar>

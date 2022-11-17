@@ -1,0 +1,64 @@
+@use '~rhenus-material/breakpoints' as breakpoints;
+
+.welcome {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  .background {
+    background-image: url('/assets/svg/welcome_cat.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 320px;
+    width: 80%;
+    margin-bottom:  64px;
+    margin-top: 64px;
+    @media (max-width: breakpoints.$max-mobile-width) {
+      height: 200px;
+    }
+  }
+  .headline {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+
+    @media (max-width: breakpoints.$max-mobile-width) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+
+
+table {
+  width: 100%;
+  margin-bottom: 48px;
+  margin-top: 96px;
+}
+
+th {
+  background-color: #E4E4E4;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  color: lightgrey;
+}
+
+.truncate-cell {
+  max-width: 60px; /* feel free to include any other value */
+  white-space: nowrap;
+  overflow: hidden;
+  overflow: auto;
+}
+
+.limitTextHeight {
+  height: 20px;
+  overflow: hidden;
+}
